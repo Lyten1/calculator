@@ -11,15 +11,18 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
+public :
+     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    QString on_pushButton_clicked();
-
-    void on_pushButton_0_clicked();
+  
     void digits_numbers();
+    void on_pushButton_dot_clicked();
+
+    void on_pushButton_Erase_clicked();
+    void operations();
+
 private:
     Ui::MainWindow *ui;
 };
