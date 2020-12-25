@@ -144,7 +144,7 @@
      <string>C</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_11">
+   <widget class="QPushButton" name="pushButton_plus_minus">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -248,7 +248,7 @@
      <string>=</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="result_show">
     <property name="geometry">
      <rect>
       <x>10</x>
