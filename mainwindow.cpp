@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_6,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_7,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_8,SIGNAL(clicked()),this,SLOT(digits_numbers()));
+    connect(ui->pushButton_9,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_percent,SIGNAL(clicked()),this,SLOT(operations()));
     connect(ui->pushButton_plus_minus,SIGNAL(clicked()),this,SLOT(operations()));
 
@@ -44,7 +45,7 @@ void MainWindow::operations(){
     num = ui->result_show->text().toDouble();
     num *= 0.01;
     label = QString::number(num, 'g',15);
-    ui->result_show->setText(label );
+    ui->result_show->setText(label);
     }
 }
 
