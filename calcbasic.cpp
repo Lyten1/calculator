@@ -2,10 +2,7 @@
 
 CalcBasic::CalcBasic()
 {
-    this->Action = "null";
-    this->Result = "null";
-    this->FirstNumber = 0;
-    this->SecondNumber = 0;
+    ClearData();
 }
 
 void CalcBasic::GetData(QString action, double firstnumber, double secondnumber)
@@ -42,7 +39,6 @@ QString CalcBasic::Calculation()
     {
     if(this->Action == "+")
     {
-
         this->Result = QString::number(this->FirstNumber + this->SecondNumber);
     }
     else
@@ -65,7 +61,7 @@ QString CalcBasic::Calculation()
                 }
                 else
                 {
-                    this->Result = "Eror";
+                    this->Result = "Error";
                 }
             }
         }
