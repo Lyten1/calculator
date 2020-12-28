@@ -17,8 +17,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_7,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_8,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_9,SIGNAL(clicked()),this,SLOT(digits_numbers()));
-    connect(ui->pushButton_plus,SIGNAL(clicked()),this,SLOT(operations()));
-    connect(ui->pushButton_minus,SIGNAL(clicked()),this,SLOT(operations()));
     connect(ui->pushButton_percent,SIGNAL(clicked()),this,SLOT(operations()));
     connect(ui->pushButton_plus_minus,SIGNAL(clicked()),this,SLOT(operations()));
 
