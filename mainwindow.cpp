@@ -7,6 +7,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    wnd_cacl = new CalcProg;
+     connect(wnd_cacl, &CalcProg::showMainWindow, this, &MainWindow::show);
+
     QObject::connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(digits_numbers()));
@@ -19,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_9,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_percent,SIGNAL(clicked()),this,SLOT(operations()));
     connect(ui->pushButton_plus_minus,SIGNAL(clicked()),this,SLOT(operations()));
+
+
 
 }
 
@@ -64,4 +69,13 @@ void MainWindow::on_pushButton_dot_clicked()
 void MainWindow::on_pushButton_Erase_clicked()
 {
 
+}
+
+void MainWindow::on_another_wnd_clicked()
+{
+    if(ui->calculation_type->currentText() == "Програміста")
+    {
+        wnd_cacl->show();
+        this->hide();
+    }
 }

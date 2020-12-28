@@ -17,10 +17,21 @@ public:
     explicit CalcProg(QWidget *parent = nullptr);
     ~CalcProg();
 
+signals:
+    void showMainWindow();
+
 private slots:
     void on_enter_number_cursorPositionChanged(int arg1, int arg2);
 
     void on_checkBox_dec_clicked(bool checked);
+
+    void on_checkBox_bin_clicked(bool checked);
+
+    void on_checkBox_oct_clicked(bool checked);
+
+    void on_checkBox_hex_clicked(bool checked);
+
+    void on_another_wnd_clicked();
 
 private:
     Ui::CalcProg *ui;

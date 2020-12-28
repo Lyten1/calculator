@@ -11,6 +11,7 @@ private:
     QString Action;
     double FirstNumber;
     double SecondNumber;
+
 public:
     CalcBasic();
     void ClearData();

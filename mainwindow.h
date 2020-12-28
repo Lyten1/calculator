@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QString>
+#include "calcprog.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -23,7 +25,10 @@ private slots:
     void on_pushButton_Erase_clicked();
     void operations();
 
+    void on_another_wnd_clicked();
+
 private:
     Ui::MainWindow *ui;
+    CalcProg *wnd_cacl;
 };
 #endif // MAINWINDOW_H
