@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QString>
-#include "calcprog.h"
+#include "calcprogam.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +29,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    CalcProg *wnd_cacl;
+    CalcProgam *wnd_cacl;
 };
 #endif // MAINWINDOW_H

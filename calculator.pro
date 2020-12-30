@@ -17,17 +17,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     calcbasic.cpp \
-    calcprog.cpp \
+    calcprogam.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     calcbasic.h \
-    calcprog.h \
+    calcprogam.h \
     mainwindow.h
 
 FORMS += \
-    calcprog.ui \
+    calcprogam.ui \
     mainwindow.ui
 
 # Default rules for deployment.

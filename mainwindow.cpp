@@ -7,8 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    wnd_cacl = new CalcProg;
-     connect(wnd_cacl, &CalcProg::showMainWindow, this, &MainWindow::show);
+    wnd_cacl = new CalcProgam;
+     connect(wnd_cacl, &CalcProgam::showMainWindow, this, &MainWindow::show);
 
     QObject::connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digits_numbers()));
