@@ -6,14 +6,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-<<<<<<< HEAD
+
 
     wnd_cacl = new CalcProgam;
      connect(wnd_cacl, &CalcProgam::showMainWindow, this, &MainWindow::show);
-=======
-    wnd_cacl = new CalcProg;
-    connect(wnd_cacl, &CalcProg::showMainWindow, this, &MainWindow::show);
->>>>>>> 071ec3dc430b1fc8f49acd2417208f0906cad2d9
+
+    wnd_cacl = new CalcProgam;
+    connect(wnd_cacl, &CalcProgam::showMainWindow, this, &MainWindow::show);
+
 
     QObject::connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digits_numbers()));
