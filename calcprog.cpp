@@ -82,25 +82,25 @@ void CalcProg::on_enter_number_cursorPositionChanged(int arg1, int arg2)
     }
 
     if(ui->checkBox_hex->isChecked())
-        {
-            QString num = ui->enter_number->text();
-            bool ok;
+    {
+        QString num = ui->enter_number->text();
+        bool ok;
 
-            QString _num;
-            _num = num;
-            int iVal = num.toInt(&ok,16);
+        QString _num;
+        _num = num;
+        int iVal = num.toInt(&ok,16);
 
-            QString binnumber = num.setNum(iVal, 2);
-            ui->bin->setText(binnumber);
+        QString binnumber = num.setNum(iVal, 2);
+        ui->bin->setText(binnumber);
 
-            QString oct = num.setNum(iVal, 8);
-            ui->oct->setText(oct);
+        QString oct = num.setNum(iVal, 8);
+        ui->oct->setText(oct);
 
-            QString dec = num.setNum(iVal, 10);
-            ui->dec->setText(dec);
+        QString dec = num.setNum(iVal, 10);
+        ui->dec->setText(dec);
 
-            ui->hex->setText(ui->enter_number->text());
-        }
+        ui->hex->setText(ui->enter_number->text());
+    }
 }
 
 
@@ -167,7 +167,7 @@ void CalcProg::on_checkBox_hex_clicked(bool checked)
         ui->dec->clear();
         ui->hex->clear();
     }
-//-----------------------/checked---------------------
+    //-----------------------/checked---------------------
 }
 
 void CalcProg::on_another_wnd_clicked()
@@ -177,4 +177,9 @@ void CalcProg::on_another_wnd_clicked()
         this->close();
         emit showMainWindow();
     }
+}
+
+void CalcProg::on_calculation_type_activated(const QString &arg1)
+{
+
 }

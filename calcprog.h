@@ -33,6 +33,8 @@ private slots:
 
     void on_another_wnd_clicked();
 
+    void on_calculation_type_activated(const QString &arg1);
+
 private:
     Ui::CalcProg *ui;
 

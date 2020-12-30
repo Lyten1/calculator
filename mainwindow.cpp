@@ -87,14 +87,6 @@ void MainWindow::on_pushButton_Erase_clicked()
     m_operator = " ";
 }
 
-void MainWindow::on_another_wnd_clicked()
-{
-    if(ui->calculation_type->currentText() == "Програміста")
-    {
-        wnd_cacl->show();
-        this->hide();
-    }
-}
 
 void MainWindow::result()
 {
@@ -109,4 +101,9 @@ void MainWindow::result()
         QString res = base_calc->GetResult();
         ui->result_show->setText(res);
        }
+}
+
+void MainWindow::on_calculation_type_activated(const QString &arg1)
+{
+    if (arg1 == "Програміста") wnd_cacl->show(); this->hide();
 }

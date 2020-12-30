@@ -26,9 +26,10 @@ private slots:
     void on_pushButton_Erase_clicked();
     void algebraOperations();
     void operations();
-    void on_another_wnd_clicked();
 
     void result();
+
+    void on_calculation_type_activated(const QString &arg1);
 
 private:
     double m_firstNum = 0;
