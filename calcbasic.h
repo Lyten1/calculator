@@ -15,7 +15,8 @@ private:
 public:
     CalcBasic();
     void ClearData();
-    void GetData(QString action = "null", double firstnumber = 0, double secondnumber = 0);
+    void SetData(QString action = "null", double firstnumber = 0, double secondnumber = 0);
+    QString GetResult();
     QString Calculation();
 };
 

@@ -6,9 +6,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+<<<<<<< HEAD
 
     wnd_cacl = new CalcProgam;
      connect(wnd_cacl, &CalcProgam::showMainWindow, this, &MainWindow::show);
+=======
+    wnd_cacl = new CalcProg;
+    connect(wnd_cacl, &CalcProg::showMainWindow, this, &MainWindow::show);
+>>>>>>> 071ec3dc430b1fc8f49acd2417208f0906cad2d9
 
     QObject::connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digits_numbers()));
@@ -22,16 +27,22 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_9,SIGNAL(clicked()),this,SLOT(digits_numbers()));
     connect(ui->pushButton_percent,SIGNAL(clicked()),this,SLOT(operations()));
     connect(ui->pushButton_plus_minus,SIGNAL(clicked()),this,SLOT(operations()));
-
-
-
+    connect(ui->pushButton_plus,SIGNAL(clicked()),this, SLOT(algebraOperations()));
+    connect(ui->pushButton_minus,SIGNAL(clicked()),this, SLOT(algebraOperations()));
+    connect(ui->pushButton_divide,SIGNAL(clicked()),this, SLOT(algebraOperations()));
+    connect(ui->pushButton_multiply,SIGNAL(clicked()),this, SLOT(algebraOperations()));
+    connect(ui->pushButton_res,SIGNAL(clicked()),this, SLOT(result()));
 }
 
 void MainWindow::digits_numbers(){
     QPushButton *button = (QPushButton *)sender();
     double num;
     QString label;
-    num = (ui->result_show->text()+ button->text()).toDouble();
+
+    if(ui->result_show->text()== "+" || ui->result_show->text()== "-" || ui->result_show->text()== "/" || ui->result_show->text()=="*")
+        num = (button->text()).toDouble();
+
+    else num = (ui->result_show->text()+ button->text()).toDouble();
     label = QString::number(num, 'g',15);
     ui->result_show->setText(label );
 }
@@ -54,6 +65,14 @@ void MainWindow::operations(){
     }
 }
 
+void MainWindow::algebraOperations(){
+    QPushButton *button = (QPushButton *)sender();
+
+    m_firstNum = ui->result_show->text().toDouble();
+    m_operator = button->text();
+
+    ui->result_show->setText(button->text());
+}
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -68,14 +87,29 @@ void MainWindow::on_pushButton_dot_clicked()
 
 void MainWindow::on_pushButton_Erase_clicked()
 {
-
+    ui->result_show->setText("0");
+    m_firstNum = 0;
+    m_secondNum = 0;
+    m_operator = " ";
 }
 
-void MainWindow::on_another_wnd_clicked()
+
+void MainWindow::result()
 {
-    if(ui->calculation_type->currentText() == "Програміста")
-    {
-        wnd_cacl->show();
-        this->hide();
-    }
+    base_calc = new CalcBasic;
+
+
+    m_secondNum = (ui->result_show->text()).toDouble();
+
+     if(m_operator == "/"|| m_operator == "*" || m_operator == "+" || m_operator == "-"){
+        base_calc->SetData(m_operator,m_firstNum,m_secondNum);
+        base_calc->Calculation();
+        QString res = base_calc->GetResult();
+        ui->result_show->setText(res);
+       }
+}
+
+void MainWindow::on_calculation_type_activated(const QString &arg1)
+{
+    if (arg1 == "Програміста") wnd_cacl->show(); this->hide();
 }
