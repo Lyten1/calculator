@@ -8,7 +8,7 @@ CalcBasic::CalcBasic()
     this->SecondNumber = 0;
 }
 
-void CalcBasic::GetData(QString action, double firstnumber, double secondnumber)
+void CalcBasic::SetData(QString action, double firstnumber, double secondnumber)
 {
     if(this->Action == "null")
     {
@@ -23,6 +23,11 @@ void CalcBasic::GetData(QString action, double firstnumber, double secondnumber)
         this->SecondNumber = secondnumber;
     }
 }
+
+QString CalcBasic::GetResult(){
+    return Result;
+}
+
 void CalcBasic::ClearData()
 {
     this->Action = "null";
