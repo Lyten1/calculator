@@ -33,8 +33,21 @@ private slots:
 
     void on_wP_standart_triggered();
 
+    void bin_system();
 
+    void oct_system();
 
+    void dec_system();
+
+    void hex_system();
+
+    void on_radioButton_bin_clicked();
+
+    void on_radioButton_oct_clicked();
+
+    void on_radioButton_dec_clicked();
+
+    void on_radioButton_hex_clicked();
 
 private:
     Ui::CalcProgam *ui;
