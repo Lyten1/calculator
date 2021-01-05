@@ -25,14 +25,7 @@ void CalcProgam::ClearDisplay()
     ui->label_2->setText("Якщо не працює, натисніть пробіл");
 }
 
-void CalcProgam::on_another_wnd_clicked()
-{
-    if(ui->calculation_type->currentText() == "Базовий")
-    {
-        this->close();
-        emit showMainWindow();
-    }
-}
+
 
 void CalcProgam::on_enter_number_cursorPositionChanged(int arg1, int arg2)
 {
@@ -144,3 +137,13 @@ void CalcProgam::on_radioButton_hex_clicked(bool checked)
         ClearDisplay();
     }
 }
+
+void CalcProgam::on_wP_standart_triggered()
+{
+    this->close();
+    emit showMainWindow();
+}
+
+
+
+

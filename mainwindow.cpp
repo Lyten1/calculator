@@ -109,7 +109,9 @@ void MainWindow::result()
        }
 }
 
-void MainWindow::on_calculation_type_activated(const QString &arg1)
+
+
+void MainWindow::on_wS_programer_triggered()
 {
-    if (arg1 == "Програміста") wnd_cacl->show(); this->hide();
+    wnd_cacl->show(); this->hide();
 }

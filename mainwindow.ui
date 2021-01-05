@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>283</width>
-    <height>441</height>
+    <height>413</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>280</y>
+      <y>255</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -37,7 +37,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>280</y>
+      <y>255</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -56,7 +56,7 @@
     <property name="geometry">
      <rect>
       <x>145</x>
-      <y>280</y>
+      <y>255</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -75,7 +75,7 @@
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>215</y>
+      <y>190</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -94,7 +94,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>215</y>
+      <y>190</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -113,7 +113,7 @@
     <property name="geometry">
      <rect>
       <x>145</x>
-      <y>215</y>
+      <y>190</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -132,7 +132,7 @@
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>150</y>
+      <y>125</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -151,7 +151,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>150</y>
+      <y>125</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -170,7 +170,7 @@
     <property name="geometry">
      <rect>
       <x>145</x>
-      <y>150</y>
+      <y>125</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -189,7 +189,7 @@
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>85</y>
+      <y>60</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -208,7 +208,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>85</y>
+      <y>60</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -227,7 +227,7 @@
     <property name="geometry">
      <rect>
       <x>145</x>
-      <y>85</y>
+      <y>60</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -246,7 +246,7 @@
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>345</y>
+      <y>320</y>
       <width>125</width>
       <height>60</height>
      </rect>
@@ -265,7 +265,7 @@
     <property name="geometry">
      <rect>
       <x>145</x>
-      <y>345</y>
+      <y>320</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -284,7 +284,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>280</y>
+      <y>255</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -303,7 +303,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>215</y>
+      <y>190</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -322,7 +322,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>150</y>
+      <y>125</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -341,7 +341,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>345</y>
+      <y>320</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -360,7 +360,7 @@
     <property name="geometry">
      <rect>
       <x>25</x>
-      <y>35</y>
+      <y>10</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -388,7 +388,7 @@ background-color : white;</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>85</y>
+      <y>60</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -403,26 +403,6 @@ background-color : white;</string>
      <string>/</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="calculation_type">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>5</y>
-      <width>101</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Базовий</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Програміста</string>
-     </property>
-    </item>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -433,8 +413,26 @@ background-color : white;</string>
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Тип калькулятора</string>
+    </property>
+    <addaction name="wS_standart"/>
+    <addaction name="wS_programer"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="wS_standart">
+   <property name="text">
+    <string>Стандартний</string>
+   </property>
+  </action>
+  <action name="wS_programer">
+   <property name="text">
+    <string>Програміста</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

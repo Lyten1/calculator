@@ -19,7 +19,7 @@ signals:
     void showMainWindow();
 
 private slots:
-    void on_another_wnd_clicked();
+
 
     void on_enter_number_cursorPositionChanged(int arg1, int arg2);
 
@@ -30,6 +30,11 @@ private slots:
     void on_radioButton_dec_clicked(bool checked);
 
     void on_radioButton_hex_clicked(bool checked);
+
+    void on_wP_standart_triggered();
+
+
+
 
 private:
     Ui::CalcProgam *ui;

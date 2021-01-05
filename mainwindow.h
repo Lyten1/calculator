@@ -33,7 +33,7 @@ private slots:
 
     void result();
 
-    void on_calculation_type_activated(const QString &arg1);
+    void on_wS_programer_triggered();
 
 private:
     double m_firstNum = 0;
